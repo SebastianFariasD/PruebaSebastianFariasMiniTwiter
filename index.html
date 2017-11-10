@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="MyStilos.css">
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" 
+crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+<div class="row">
+  <div class="col-md-6">
+  	
+    <form id ="formu">
+    	<textarea id="mitexto"></textarea>
+        <input type="submit" value="Crear">
+     
+    </form>
+    <div class="inicio" ></div>
+
+
+     </div>
+
+  <div class="col-md-6">
+  		 <script type="text/javaScript">
+  	 	$(document).ready(function(){
+  	 		$("#formu").on('submit', function(event){
+  	 		var letra = $("#mitexto").val();	
+               event.preventDefault();
+               $("body").append(
+               	'<div class= "inicio">'
+               	+ letra
+                +'</div>'
+               	) 
+  	 		});
+  	 	});
+
+
+  	 </script>
+  
+  </div>
+</div>
+</body>
+</html>
